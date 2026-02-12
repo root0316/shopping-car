@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-container">
+    <!-- Header 区域 -->
+    <cart-header></cart-header>
+
+    <!-- 商品 Item 项组件 -->
+    <cart-item></cart-item>
+    <cart-item></cart-item>
+    <cart-item></cart-item>
+
+    <!-- Foote 区域 -->
+    <cart-footer></cart-footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CartHeader from '@/components/cart-header.vue'
+import CartFooter from '@/components/cart-footer.vue'
+import CartItem from '@/components/cart-item.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CartHeader,
+    CartFooter,
+    CartItem
   }
 }
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less" scoped>
+.app-container {
+  padding: 50px 0;
+  font-size: 14px;
 }
 </style>
