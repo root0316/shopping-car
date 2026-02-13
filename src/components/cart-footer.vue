@@ -17,6 +17,9 @@ export default {
   name: 'CartFooter',
   computed: {
     ...mapGetters('cart', ['getAllPrice', 'getAllNum'])
+  },
+  mounted () {
+    console.log(this.getAllPrice, this.getAllNum)
   }
 }
 </script>

@@ -44,10 +44,10 @@ export default {
   },
   getters: {
     getAllPrice (state) {
-      state.list.reduce((sum, cur) => sum + cur.count * cur.price, 0)
+      return state.list.reduce((sum, cur) => sum + cur.count * cur.price, 0)
     },
     getAllNum (state) {
-      state.list.reduce((sum, cur) => sum + cur.count, 0)
+      return state.list.reduce((sum, cur) => sum + cur.count, 0)
     }
   }
 }
